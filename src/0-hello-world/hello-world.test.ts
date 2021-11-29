@@ -7,3 +7,18 @@ describe('the getHelloWorld function', () => {
     expect(actual).toBe(expected);
   });
 });
+
+describe('the subject under test', () => {
+  let sut;
+  beforeEach(() => {
+    // Arrange
+    sut = undefined;
+  });
+  it('should do something', () => {
+    // Act
+    const actual = undefined;
+    // Assert
+    const expected = undefined;
+    expect(actual).toStrictEqual(expected);
+  });
+});
