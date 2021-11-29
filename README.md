@@ -9,7 +9,7 @@ cd TDD.ts.jest
 npm i
 npm test
 
-# Alteratively, start from empty folder
+# Alternatively, start from empty folder
 
 npm i -D typescript jest
 npm i -D @types/node @types/jest
