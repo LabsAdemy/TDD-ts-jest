@@ -9,5 +9,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnType": true,
   "typescript.format.insertSpaceAfterTypeAssertion": true,
-  "cSpell.words": ["codepaths", "tsbuildinfo"]
+  "cSpell.words": ["codepaths", "Fizzbuzz", "tsbuildinfo"]
 }
