@@ -1,9 +1,9 @@
-import { getHelloWorld } from "./hello-world";
+import { getHelloWorld } from './hello-world';
 
-describe("the getHelloWorld function", () => {
+describe('the getHelloWorld function', () => {
   it('should return "Hello World!"', () => {
     const actual = getHelloWorld();
-    const expected = "Hello World!";
+    const expected = 'Hello World!';
     expect(actual).toBe(expected);
   });
 });
