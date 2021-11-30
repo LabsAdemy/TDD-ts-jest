@@ -28,4 +28,10 @@ describe('anagram checker', () => {
   it('7️⃣ should be false for different count of common letters', () => {
     expect(areAnagrams('ala', 'all')).toBe(false);
   });
+  it('should resolve simple truthy cases', () => {
+    expect(areAnagrams('more', 'Rome')).toBe(true);
+  });
+  it('should resolve simple falsy cases', () => {
+    expect(areAnagrams('more', 'moor')).toBe(false);
+  });
 });
