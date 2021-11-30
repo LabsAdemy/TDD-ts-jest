@@ -1,5 +1,7 @@
+// Discovering algorithm from examples
+
 /*
-Fibonacci Sequence
+ * Fibonacci Sequence
 f_{0}=0
 f_{1}=1
 f_{2}=1
@@ -10,6 +12,8 @@ f_{6}=8
 f_{7}=13
 f_{8}=21
 f_{9}=34
+
+ * Rule thats emerges
 f_{n}=f_{n-1}+f_{n-2}
 */
 

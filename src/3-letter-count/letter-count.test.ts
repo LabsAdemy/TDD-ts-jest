@@ -1,3 +1,16 @@
+// Implementing vague requirements, starting small and performing baby-steps
+
+/**
+ * Vague, imprecise
+ * A function that counts letter in a word
+ */
+
+/**
+ * Explicit
+ * Returns an object with properties for each different letter
+ * And the number of occurrences of each one as values
+ */
+
 import { getLetterCount } from './letter-count';
 describe('the getLetterCount function', () => {
   it('should return one for each letter of a simple word (with no repeated letters)', () => {
@@ -11,7 +24,12 @@ describe('the getLetterCount function', () => {
       p: 2,
     });
   });
-  it('should return  of an empty word', () => {
+  it('should return an empty object for an empty word', () => {
     expect(getLetterCount('')).toStrictEqual({});
   });
 });
+
+// To do:
+// - special chars
+// - spaces
+// - uppercase
