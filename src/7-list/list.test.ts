@@ -54,7 +54,12 @@ describe('a generic linked list', () => {
     const expected = 2;
     expect(actual).toBe(expected);
   });
-  it('5️⃣ the getValueByIndex should return undefined when out of limits', () => {
+  it('5️⃣ the getValueByIndex should return undefined when out of limits down', () => {
+    const actual = sutList.getValueByIndex(-1);
+    const expected = undefined;
+    expect(actual).toBe(expected);
+  });
+  it('5️⃣ the getValueByIndex should return undefined when out of limits up', () => {
     sutList.addToHead(1);
     sutList.addToHead(2);
     const actual = sutList.getValueByIndex(2);
