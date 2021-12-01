@@ -7,6 +7,7 @@
  * 4️⃣ the length property returns the number of nodes in the list
  * 5️⃣ the getValueByIndex should return undefined when out of limits
  * 5️⃣ the getValueByIndex should return the value of the index node being zero for head
+ * 6️⃣ the getNodeByIndex should return the node at the position or undefined if not found
  */
 import { LinkedList } from './list';
 describe('a generic linked list', () => {
