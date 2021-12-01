@@ -33,4 +33,16 @@ describe('a generic linked list', () => {
     const expected = 1;
     expect(actual).toBe(expected);
   });
+  it('4️⃣ the length property returns zero on empty lists', () => {
+    const actual = sutList.length;
+    const expected = 0;
+    expect(actual).toBe(expected);
+  });
+  it('4️⃣ the length property returns the number of nodes in the list', () => {
+    sutList.addToHead(1);
+    sutList.addToHead(2);
+    const actual = sutList.length;
+    const expected = 2;
+    expect(actual).toBe(expected);
+  });
 });
