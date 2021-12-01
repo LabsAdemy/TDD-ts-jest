@@ -1,14 +1,35 @@
+// 1️⃣ should generate a word of random length between 5 an 10
+// export class Hangman {
+//   public generateWord(): string {
+//     return 'secret';
+//   }
+// }
+
+// 2️⃣ should give a clue of dashes with the length of the secret word
+// export class Hangman {
+//   public generateWord(): string {
+//     return 'secret';
+//   }
+//   public getClue() {
+//     const secretWordLength = this.generateWord().length;
+//     return '_'.repeat(secretWordLength);
+//   }
+// }
+
+// 3️⃣ should give a new clue replacing dashes with guessed letters
+// 4️⃣ should give a same clue if guessed letters is no present
 export class Hangman {
-  secretWord = 'vitae';
-  generateWord(): string {
+  public secretWord = 'secret';
+  public generateWord(): string {
     return this.secretWord;
   }
-  getClue(currentClue = '', guessingLetter = ''): string {
+  public getClue(currentClue = '', guessingLetter = '') {
+    const secretWordLength = this.generateWord().length;
     if (currentClue === '') {
-      return '_'.repeat(this.secretWord.length);
+      return '_'.repeat(secretWordLength);
     }
     let newClue = '';
-    for (let i = 0; i < this.secretWord.length; i++) {
+    for (let i = 0; i < secretWordLength; i++) {
       if (this.secretWord[i] === guessingLetter) {
         newClue += guessingLetter;
       } else {

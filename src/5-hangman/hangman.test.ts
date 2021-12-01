@@ -13,23 +13,23 @@ import { Hangman } from './hangman';
 
 describe('the Hangman game engine', () => {
   let sutHangman: Hangman;
-  let wordToGuess: string;
+  let secretWord: string;
   beforeAll(() => {
     sutHangman = new Hangman();
-    wordToGuess = sutHangman.generateWord();
+    secretWord = sutHangman.generateWord();
   });
-  it('should generate a word of random length between 5 an 10', () => {
-    const actual: number = wordToGuess.length;
+  it('1️⃣ should generate a word of random length between 5 an 10', () => {
+    const actual: number = secretWord.length;
     expect(actual).toBeGreaterThanOrEqual(5);
-    const actual10: boolean = wordToGuess.length <= 10;
+    const actual10: boolean = secretWord.length <= 10;
     expect(actual10).toBeTruthy();
   });
-  it('should give a clue of dashes of word length at start', () => {
+  it('2️⃣ should give a clue of dashes with the length of the secret word', () => {
     const actual: string = sutHangman.getClue();
-    const expected = '_'.repeat(wordToGuess.length);
+    const expected = '_'.repeat(secretWord.length);
     expect(actual).toStrictEqual(expected);
   });
-  it('should give a new clue replace dashes with guessed letters', () => {
+  it('3️⃣ should give a new clue replace dashes with guessed letters', () => {
     sutHangman.secretWord = 'vitae';
     const inputClue = sutHangman.getClue();
     const inputLetter = 'e';
@@ -37,15 +37,15 @@ describe('the Hangman game engine', () => {
     const expected = '____e';
     expect(actual).toStrictEqual(expected);
   });
-  it('should give a new clue with dashes if no present', () => {
+  it('4️⃣ should give a same clue if guessed letters is no present', () => {
     sutHangman.secretWord = 'vitae';
     const inputClue = sutHangman.getClue();
     const inputLetter = 'b';
     const actual = sutHangman.getClue(inputClue, inputLetter);
-    const expected = '_____';
+    const expected = inputClue;
     expect(actual).toStrictEqual(expected);
   });
-  it('should give a new clue replace dashes with guessed letters multiple times', () => {
+  it('5️⃣ should give a new clue replacing multiple dashes with guessed letters multiple times', () => {
     sutHangman.secretWord = 'vitae';
     const inputClue = sutHangman.getClue();
     const inputLetter1 = 'e';
@@ -56,3 +56,6 @@ describe('the Hangman game engine', () => {
     expect(actual2).toStrictEqual(expected);
   });
 });
+
+// Improvements
+// Create a functional version
