@@ -47,4 +47,18 @@ describe('a generic linked list', () => {
     const expected = 2;
     expect(actual).toBe(expected);
   });
+  it('5️⃣ the getValueByIndex should return the value stored in the head node for zero', () => {
+    sutList.addToHead(1);
+    sutList.addToHead(2);
+    const actual = sutList.getValueByIndex(0);
+    const expected = 2;
+    expect(actual).toBe(expected);
+  });
+  it('5️⃣ the getValueByIndex should return undefined when out of limits', () => {
+    sutList.addToHead(1);
+    sutList.addToHead(2);
+    const actual = sutList.getValueByIndex(2);
+    const expected = undefined;
+    expect(actual).toBe(expected);
+  });
 });
