@@ -18,6 +18,7 @@
 
 // 3️⃣ should give a new clue replacing dashes with guessed letters
 // 4️⃣ should give a same clue if guessed letters is no present
+// 5️⃣ should give a new clue replacing multiple dashes with guessed letters multiple times
 export class Hangman {
   public secretWord = 'secret';
   public generateWord(): string {
