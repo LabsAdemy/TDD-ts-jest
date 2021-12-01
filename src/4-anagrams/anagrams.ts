@@ -22,6 +22,7 @@ import { getLetterCount } from '../3-letter-count/letter-count';
 //     if (!secondDistinctLetters.includes(letterOfFirst)) {
 //       areAnagrams = false;
 //     }
+//     // 7️⃣
 //     if (secondLetterCount[letterOfFirst] !== firstLetterCount[letterOfFirst]) {
 //       areAnagrams = false;
 //     }
@@ -31,22 +32,24 @@ import { getLetterCount } from '../3-letter-count/letter-count';
 //   // return JSON.stringify(firstLetterCount) === JSON.stringify(secondLetterCount); //
 // };
 
+// 8️⃣ Refactoring
 export const areAnagrams = (first: string, second: string): boolean => {
-  const firstCleaned = first.toLowerCase();
-  const secondCleaned = second.toLowerCase();
+  const firstCleaned = first.toLowerCase(); //2️⃣
+  const secondCleaned = second.toLowerCase(); //2️⃣
   if (firstCleaned === secondCleaned) {
-    return true;
+    return true; // 1️⃣
   }
   if (firstCleaned.length !== secondCleaned.length) {
-    return false;
+    return false; //3️⃣
   }
   const firstLetterCount = getLetterCount(firstCleaned);
   const secondLetterCount = getLetterCount(secondCleaned);
   const firstLetters = Object.keys(firstLetterCount);
   const secondLetters = Object.keys(secondLetterCount);
   if (firstLetters.length !== secondLetters.length) {
-    return false;
+    return false; // 4️⃣
   }
+  // 5️⃣ 6️⃣ 7️⃣
   return firstLetters.every(
     letterOfFirst =>
       firstLetterCount[letterOfFirst] === secondLetterCount[letterOfFirst]
