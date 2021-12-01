@@ -3,6 +3,8 @@
  * 1️⃣ the isEmpty method determines whether the list has no head
  * 2️⃣ the addToHead method sets a node object on the head with this value inside
  * 3️⃣ if there was a head the addToHead method should set the it as the next node link of the new head
+ * 4️⃣ the length property returns zero on empty lists
+ * 4️⃣ the length property returns the number of nodes in the list
  */
 import { LinkedList } from './list';
 describe('a generic linked list', () => {
