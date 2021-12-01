@@ -5,6 +5,8 @@
  * 3️⃣ if there was a head the addToHead method should set the it as the next node link of the new head
  * 4️⃣ the length property returns zero on empty lists
  * 4️⃣ the length property returns the number of nodes in the list
+ * 5️⃣ the getValueByIndex should return undefined whe out of limits
+ * 5️⃣ the getValueByIndex should return the value of the index node being zero for head
  */
 import { LinkedList } from './list';
 describe('a generic linked list', () => {
