@@ -8,7 +8,8 @@ export class LinkedList<T> {
     this.head = { value, next: this.head };
     this.length++;
   }
-  public getValueByIndex(index: number): T | undefined {
+  public getNodeByIndex(index: number): { value: T } | undefined {
+    if (index === 0) return this.head;
     if (index < 0 || index >= this.length) {
       return undefined;
     }
@@ -16,6 +17,10 @@ export class LinkedList<T> {
     for (let i = 0; i < index; i++) {
       currentNode = currentNode.next;
     }
-    return currentNode.value;
+    return currentNode;
+  }
+  public getValueByIndex(index: number): T | undefined {
+    const node = this.getNodeByIndex(index);
+    return node ? node.value : undefined;
   }
 }

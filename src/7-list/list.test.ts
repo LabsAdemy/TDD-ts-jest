@@ -48,23 +48,77 @@ describe('a generic linked list', () => {
     const expected = 2;
     expect(actual).toBe(expected);
   });
-  it('5️⃣ the getValueByIndex should return the value stored in the head node for zero', () => {
+
+  // it('5️⃣ the getValueByIndex should return the value stored in the head node for zero', () => {
+  //   sutList.addToHead(1);
+  //   sutList.addToHead(2);
+  //   const actual = sutList.getValueByIndex(0);
+  //   const expected = 2;
+  //   expect(actual).toBe(expected);
+  // });
+  // it('5️⃣ the getValueByIndex should return undefined when out of limits down', () => {
+  //   const actual = sutList.getValueByIndex(-1);
+  //   const expected = undefined;
+  //   expect(actual).toBe(expected);
+  // });
+  // it('5️⃣ the getValueByIndex should return undefined when out of limits up', () => {
+  //   sutList.addToHead(1);
+  //   sutList.addToHead(2);
+  //   const actual = sutList.getValueByIndex(2);
+  //   const expected = undefined;
+  //   expect(actual).toBe(expected);
+  // });
+  // it('5️⃣ the getValueByIndex should return the value of the node on position index', () => {
+  //   sutList.addToHead(1);
+  //   sutList.addToHead(2);
+  //   sutList.addToHead(3);
+  //   const actual = sutList.getValueByIndex(1);
+  //   const expected = 2;
+  //   expect(actual).toBe(expected);
+  // });
+  // it('6️⃣ the getNodeByIndex should return the node at the position or undefined if not found', () => {
+  //   sutList.addToHead(1);
+  //   sutList.addToHead(2);
+  //   const actual = sutList.getNodeByIndex(0)?.value;
+  //   const expected = 2;
+  //   expect(actual).toBe(expected);
+  // });
+
+  // 🔀 REORDER AFTER REFACTOR
+
+  it('5️⃣ the getNodeByIndex should return the node stored in the head node for zero', () => {
+    sutList.addToHead(1);
+    sutList.addToHead(2);
+    const actual = sutList.getNodeByIndex(0);
+    const expected = 2;
+    expect(actual?.value).toBe(expected);
+  });
+  it('5️⃣ the getNodeByIndex should return undefined when out of limits down', () => {
+    const actual = sutList.getNodeByIndex(-1);
+    const expected = undefined;
+    expect(actual).toBe(expected);
+  });
+  it('5️⃣ the getNodeByIndex should return undefined when out of limits up', () => {
+    sutList.addToHead(1);
+    sutList.addToHead(2);
+    const actual = sutList.getNodeByIndex(2);
+    const expected = undefined;
+    expect(actual).toBe(expected);
+  });
+  it('5️⃣ the getNodeByIndex should return the value of the node on position index', () => {
+    sutList.addToHead(1);
+    sutList.addToHead(2);
+    sutList.addToHead(3);
+    const actual = sutList.getNodeByIndex(1)?.value;
+    const expected = 2;
+    expect(actual).toBe(expected);
+  });
+
+  it('6️⃣ the getValueByIndex should return the value of the index node being zero for head', () => {
     sutList.addToHead(1);
     sutList.addToHead(2);
     const actual = sutList.getValueByIndex(0);
     const expected = 2;
-    expect(actual).toBe(expected);
-  });
-  it('5️⃣ the getValueByIndex should return undefined when out of limits down', () => {
-    const actual = sutList.getValueByIndex(-1);
-    const expected = undefined;
-    expect(actual).toBe(expected);
-  });
-  it('5️⃣ the getValueByIndex should return undefined when out of limits up', () => {
-    sutList.addToHead(1);
-    sutList.addToHead(2);
-    const actual = sutList.getValueByIndex(2);
-    const expected = undefined;
     expect(actual).toBe(expected);
   });
 });
